@@ -1,0 +1,1085 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    perspective: 600px;
+    background-color: rgb(244, 244, 244);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.header-parent {
+    height: 35px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-parent ul {
+    display: flex;
+    justify-content: space-between;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight:lighter;
+}
+.header-ul-left {
+    width: 18%;
+    margin-left: 100px;
+}
+.header-ul-right {
+    width: 27%;
+    margin-right: 100px;
+}
+.header-parent li {
+    position: relative;
+    list-style-type: none;
+}
+.header-parent ul a {
+    color: black;
+    text-decoration: none;
+}
+.ss {
+    margin-left: 0.8px;
+}
+.header-ul-right li i{
+    margin-left: 0.2px;
+}
+.header-parent li a::after{
+    position: absolute;
+    content: "";
+    margin-left: -8px;
+    width: 1.5px;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    transition: 0.5s;
+}
+.header-i a:hover {
+    color: red;
+}
+.header-i:hover {
+    transform: rotateY(180deg);
+}
+.header-parent li:hover a::after {
+    height: 100%;
+}
+.header-parent li a::before{
+    position: absolute;
+    content: "";
+    margin-right: -8px;
+    width: 1.5px;
+    height: 0;
+    top: 0;
+    right: 0;
+    background-color: red;
+    transition: 0.5s;
+}
+.header-parent li:hover a::before {
+    height: 100%;
+}
+.header-line {
+    width: 100%;
+    height: 1.5px;
+    background-color:darkgray;
+}
+.nav-parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+}
+.nav-logo img{
+    width: 70px;
+    height: 70px;
+}
+.nav-logo h2 {
+    color: rgb(77, 77, 77);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    margin: 17px 5px 0 8px;
+}
+.nav-logo span {
+    margin-top: 14px;
+    font-weight: 100;
+    font-size: 28px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav-parent li {
+    position: relative;
+    list-style-type: none;
+    transition: 0.3s;
+}
+.nav-parent a {
+    text-decoration: none;
+    color: black;
+}
+.nav-ul-center>ul{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+.nav-ul-right ul {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+.nav-ul-right li:hover a {
+    color: red;
+}
+.cart::before{
+    top: -14px;
+    left: 1.5px;
+    color: white;
+    background-color: red;
+    height: 18px;
+    width: 18px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    content: "2";
+    transition: 0.2s;
+}
+.nav-ul-right .cart i {
+    transition: 0.2s;
+}
+.nav-ul-right .cart:hover i{
+    transform: scale(1.1);
+} 
+.nav-ul-right .cart:hover::before {
+    top: -17px;
+}
+.home , .men,.women,.baby,.li-dropdown,.contact {
+    padding: 5px 2px;
+}
+.r-l {
+    transition: 0.5s;
+    position: absolute;
+    background-color: red;
+    margin-right: -5px;
+    margin-bottom: -5px;
+    width: 0.5px;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+.nav-ul-center .l-l {
+    transition: 0.5s;
+    position: absolute;
+    background-color: red;
+    margin-left: -5px;
+    margin-bottom: -5px;
+    width: 0.5px;
+    height: 0;
+    bottom: 0;
+    left: 0;
+}
+.nav-ul-center .t-l {
+    transition: 0.5s;
+    position: absolute;
+    background-color: red;
+    margin-left: -5px;
+    margin-top: -5px;
+    width: 0px;
+    height: 0.5px;
+    top: 0;
+    left: 0;
+}
+.nav-ul-center .b-l {
+    transition: 0.5s;
+    position: absolute;
+    background-color: red;
+    margin-left: -5px;
+    margin-bottom: -5px;
+    width: 0px;
+    height: 0.5px;
+    bottom: 0;
+    left: 0;
+}
+.nav-ul-center li:hover .r-l {
+    height: 130%;
+}
+.nav-ul-center li:hover .l-l {
+    height: 130%;
+}
+.nav-ul-center .home:hover .t-l {
+    width: 121%;
+}
+.nav-ul-center .home:hover .b-l {
+    width: 121%;
+} 
+.nav-ul-center .men:hover .t-l {
+    width: 128%;
+}
+.nav-ul-center .men:hover .b-l {
+    width: 128%;
+} 
+.nav-ul-center .women:hover .t-l {
+    width: 118%;
+}
+.nav-ul-center .women:hover .b-l {
+    width: 118%;
+} 
+.nav-ul-center .baby:hover .t-l {
+    width: 109%;
+}
+.nav-ul-center .baby:hover .b-l {
+    width: 109%;
+} 
+.nav-ul-center .li-dropdown:hover .t-l {
+    width: 116%;
+}
+.nav-ul-center .li-dropdown:hover .b-l {
+    width: 116%;
+} 
+.nav-ul-center .contact:hover .t-l {
+    width: 117%;
+}
+.nav-ul-center .contact:hover .b-l {
+    width: 117%;
+} 
+.drop {
+    width: 290px;
+    height: 190px;
+    border: 1px solid rgb(121, 121, 121);
+    border-radius: 15px;
+    position: absolute;
+    top: 40px;
+    z-index: 15;
+    background-color: white;
+    left: -80px;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.dropdown-l {
+    margin-right: 25px;
+    margin-left: 10px;
+}
+.log {
+    width: 45px;
+}
+.nav-ul-center .dropdown-l>p , .dropdown-r>p{
+    margin: 15px 0 0px 10px;
+    color: rgb(121, 121, 121);
+}
+.dropdown-l li , .dropdown-r li{
+    margin: 10px 0 10px 10px;
+}
+.dropdown-l .dropdown-l-line , .dropdown-r-line {
+    margin-top: 5px;
+    width: 45px;
+    height: 1px;
+    background-color: rgb(121, 121, 121);
+}
+.dropdown-r-line {
+    width: 35px;
+}
+.li-dropdown:hover .drop {
+    visibility: visible;
+    opacity: 1;
+}
+.drop li:hover a{
+    color: red;
+} 
+.drop li:hover{
+    transform: scale(1.1);
+} 
+.article-p {
+    padding-top: 7px;
+    background-color: black;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    height: 40px;
+    font-size: 17px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.article-p a {
+    color: rgb(237, 221, 176);
+    transition: 0.2s;
+}
+.article-p a:hover {
+    letter-spacing: 2px;
+}
+
+/* Menu */
+.menu-content {
+    height: 100vh;
+    background-color: #e7e7e7;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+.menu-text {
+    width: 50%;
+    text-align: center;
+    margin-top: 200px;
+}
+.menu-h21 {
+    font-family: "Dancing Script", cursive;
+    color: red;
+    font-size: 60px;
+    font-weight: lighter;
+}
+.menu-h22 , .menu-h23 , .menu-text p , .menu-text a{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.menu-h22 {
+    font-size: 40px;
+}
+.menu-h23 {
+    margin-top: -4px;
+    margin-bottom: 10px;
+}
+.menu-text p {
+    margin: auto;
+    width: 380px;
+    color: rgb(104, 104, 104);
+}
+.menu-text a {
+    margin:25px auto;
+    width: 150px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    border: black 1px solid;
+    border-radius: 4px;
+    background-color: black;
+    padding: 15px 0;
+    transition: 0.5s;
+}
+.menu-text a:hover {
+    color: black;
+    background-color: white;
+}
+.menu-ph img{
+    height: 100%;
+    width: 695.200px;
+}
+
+/*Section1*/
+.categories {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    margin:150px auto;
+}
+.categories-item {
+    width: 32%;
+    height: 400px;
+    position: relative;
+    border-radius: 5px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.categories-item img {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    transition: 0.3s;
+}
+.categories-text {
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    background: -webkit-linear-gradient(bottom,black,rgba(0, 0, 0, 0));
+}
+.categories-text h2 {
+    color: white;
+    transform: translate(0 , 70px);
+    transition: 0.8s;
+}
+.categories-text a {
+    width: 120px;
+    margin: auto;
+    font-size: 20px;
+    display: block;
+    color: rgb(237, 221, 176);
+    transition: 0.8s;
+    transform: translate(0,100px);
+    visibility: hidden;
+    opacity: 0;
+}
+.categories-text a:hover {
+    letter-spacing: 2px;
+}
+.categories-item:hover img{
+    transform: scale(1.1);
+}
+.categories-item:hover h2 {
+    transform: translate(0,30px);
+}
+.categories-item:hover a {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 50px);
+}
+
+/*Section2*/
+.trends-container {
+    height: 100vh;
+}
+.trends-title {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+.trends-title h2 {
+    font-size: 35px;
+    text-transform: capitalize;
+}
+.trends-title ul {
+    margin-top: 15px;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+.trends-title li {
+    font-size: 18px;
+    list-style-type: none;
+    transition: 0.3s;
+}
+.trends-title li:hover {
+    color: red;
+    cursor: pointer;
+}
+.trends-title .trend-men {
+    position: relative;
+    color: red;
+}
+.select-line {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(209, 0, 0);
+    position: absolute;
+    bottom: -15px;
+} 
+.title-line {
+    width: 80%;
+    margin: 15px auto;
+    height: 2.5px;
+    background-color: rgba(173, 173, 173, 0.652);
+}
+.trends-parent {
+    display: flex;
+}
+.trends-parent .left , .trends-parent .right {
+    height: 26px;
+    margin-top: 200px;
+    color: rgb(146, 146, 146);
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.trends-parent .left {
+    margin-left: 120px;
+}
+.trends-parent .right {
+    margin-right: 120px;
+}
+.trends-parent .left:hover  , .trends-parent .right:hover{
+    color: rgb(113, 113, 113);
+}
+.trends-content {
+    margin: 50px auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.trends-icon {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    opacity: 0;
+    transform: translate(0 , 60px);
+    transition: 1.3s;
+}
+.trends-icon i {
+    text-align: center;
+    padding-top: 10px;
+    transform: translateY(200px);
+    background-color: rgba(255, 255, 255, 0.523);
+    color: black;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    transition: 0.5s;
+}
+.trends-icon :first-of-type i {
+    border-radius: 5px 0 0 5px;
+}
+.trends-icon :last-of-type i {
+    border-radius: 0 5px 5px 0;
+}
+.trends-icon i:hover {
+    background-color: rgba(255, 0, 0, 0.83);
+    color: white;
+}
+.trends-item:hover .trends-icon {
+    opacity: 1;
+    transform: translateY(35px);
+}
+.trends-item {
+    width: 24%;
+}
+.trends-photo, .front , .back {
+    width: 100%;
+    height: 350px;
+}
+.trends-photo {
+    position: relative;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+.front , .back {
+    position: absolute;
+    background-position: top;
+    background-size: cover;
+    border-radius: 5px;
+}
+.back {
+    transform: rotateY(180deg);
+}
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+}
+.item1-front {
+    background-image: url(../images/TrendSec/front-Graphic\ Printed\ Oversized\ T-Shirt.webp);
+}
+.item1-back {
+    background-image: url(../images/TrendSec/back-Graphic\ Printed\ Oversized\ T-Shirt.webp);
+}
+.item2-front {
+    background-image: url(../images/TrendSec/front-Crew\ Neck\ Printed\ Summer\ Tee.webp);
+    background-position:0 -10px;
+}
+.item2-back {
+    background-image: url(../images/TrendSec/back-Crew\ Neck\ Printed\ Summer\ Tee.webp);
+        background-position:0 -10px;
+}
+.item3-front {
+    background-image: url(../images/TrendSec/front-Elbow\ Sleeves\ Relaxed\ Printed\ Tee.webp);
+        background-position:0 -15px;
+}
+.item3-back {
+    background-image: url(../images/TrendSec/back-Elbow\ Sleeves\ Relaxed\ Printed\ Tee.webp);  
+        background-position:0 -15px;
+}
+.item4-front {
+    background-image: url(../images/TrendSec/front-Relaxed\ Fit\ Printed\ Cotton\ Tee.webp);
+        background-position:0 -10px;
+}
+.item4-back {
+    background-image: url(../images/TrendSec/back-Relaxed\ Fit\ Printed\ Cotton\ Tee.webp);
+        background-position:0 -10px;
+}
+.trends-item:hover .trends-photo{
+    transform: rotateY(180deg);
+}
+.trends-item:hover .trends-type {
+    color: red;
+}
+.trends-item>a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px 0;
+    font-size: 20px;
+}
+.trends-item .trends-type2 {
+    margin-bottom: 46px;
+}
+.trends-price {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    margin: auto;
+    color: rgb(84, 84, 84);
+}
+/*Section3*/
+.feedback {
+    background-color: rgba(176, 195, 195, 0.296);
+    height: 55vh;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-top: rgb(173, 173, 173) 2px solid;
+    border-bottom: rgb(173, 173, 173) 2px solid;
+    margin-top: 90px;
+    margin-bottom: 180px;
+}
+.feedback-text>h2 {
+    font-size: 38px;
+    margin: 45px 0 0 0;
+}
+.feedback-text p {
+    margin: 45px auto;
+    width: 65%;
+    color: rgb(113, 113, 113);
+    font-size: 25px;
+}
+.feedback i {
+    height: 26px;
+    margin-top: 170px;
+    color: rgb(146, 146, 146);
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.feedback i:hover {
+    color: rgb(113, 113, 113);
+}
+.feedback .left {
+    margin-left: 120px  ;
+}
+.feedback .right {
+    margin-right: 120px;
+}
+.feedback-text .feedback-info {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.feedback-info img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 10px 0 0 0;
+}
+.feedback-info h2 {
+    font-size: 15px;
+    margin: 25px 0 5px 15px;
+}
+.feedback-info p {
+    font-size: 13px;
+    width: 100%;
+    margin: 0 0 0 10px;
+}
+
+/*Section4*/
+.like {
+    height: 100vh;
+}
+.like h2 {
+    text-align: center;
+    font-size: 35px;
+    text-transform: capitalize;
+}
+.like-parent {
+    display: flex;
+}
+.like-parent .left , .like-parent .right {
+    height: 26px;
+    margin-top: 200px;
+    color: rgb(146, 146, 146);
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.like-parent .left {
+    margin-left: 120px;
+}
+.like-parent .right {
+    margin-right: 120px;
+}
+.like-parent .left:hover  , .like-parent .right:hover{
+    color: rgb(113, 113, 113);
+}
+.like-content {
+    margin: 50px auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.like-icon {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    opacity: 0;
+    transform: translate(0 , 30px);
+    transition: 1.3s;
+}
+.like-icon i {
+    text-align: center;
+    padding-top: 10px;
+    transform: translateY(200px);
+    background-color: rgba(255, 255, 255, 0.523);
+    color: black;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    transition: 0.8s;
+}
+.like-icon :first-of-type i {
+    border-radius: 5px 0 0 5px;
+}
+.like-icon :last-of-type i {
+    border-radius: 0 5px 5px 0;
+}
+.like-icon i:hover {
+    background-color: rgba(255, 0, 0, 0.83);
+    color: white;
+}
+.like-item:hover .like-icon {
+    opacity: 1;
+    transform: translateY(35px);
+}
+.like-item {
+    width: 24%;
+}
+.like-photo, .first , .sec {
+    width: 100%;
+    height: 350px;
+}
+.like-photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.first , .sec {
+    position: absolute;
+    background-position: top;
+    background-size: cover;
+}
+.item1-first {
+    background-image: url(../images/LikeSec/First-Sheer\ Striped\ Slip\ On\ Tee.webp);
+}
+.item1-sec {
+    background-image: url(../images/LikeSec/sec-Sheer\ Striped\ Slip\ On\ Tee.webp);
+}
+.item2-first {
+    background-image: url(../images/LikeSec/first-Patterned\ Slip\ On\ Summer\ Shorts.webp);
+}
+.item2-sec {
+    background-image: url(../images/LikeSec/sec-Patterned\ Slip\ On\ Summer\ Shorts.webp);
+}
+.item3-first {
+    background-image: url(../images/LikeSec/first-rinted\ Loose\ Fit\ Slip\ On\ Tee.webp);
+}
+.item3-sec {
+    background-image: url(../images/LikeSec/sec-rinted\ Loose\ Fit\ Slip\ On\ Tee.jpg);  
+}
+.item4-first {
+    background-image: url(../images/LikeSec/first-Self\ Pattern\ Relaxed\ Shirt.webp);
+}
+.item4-sec {
+    background-image: url(../images/LikeSec/sec-Self\ Pattern\ Relaxed\ Shirt.webp);
+}
+.sec {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0,-150px) scale(1.2);
+    transition: 1s;
+    z-index: 1;
+}
+.like-item:hover .sec{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0,0) scale(1);
+}
+.like-item:hover .like-type {
+    color: red;
+}
+.like-item>a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px 0;
+    font-size: 20px;
+}
+.like-item .like-type1 {
+    margin-bottom: 46px;
+}
+.like-price {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    margin: auto;
+    color: rgb(84, 84, 84);
+}
+
+/*Section5*/
+.news {
+    background-color: rgba(176, 195, 195, 0.296);
+    height: 100vh;
+    border-top: rgb(173, 173, 173) 3px solid;
+    border-bottom: rgb(173, 173, 173) 3px solid;
+    margin-top: 90px;
+    margin-bottom: 180px;
+}
+.news h2 {
+    text-align: center;
+    font-size: 38px;
+    margin: 25px 0 25px 0;
+}
+.news-content {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.news-item {
+    width: 31%;
+}
+.news-item img {
+    width: 100%;
+    height: 380px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+.news-item p {
+    margin: 13px 0;
+    color: rgb(127, 127, 127);
+    font-size: 15px;
+}
+.news-item .news-a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: 0.2s;
+}
+.news-item:hover .news-a{
+    color: red;
+}
+.news-item .news-read {
+    color: black;
+    font-size: 20px;
+    transition: 0.1s;
+    display: block;
+    width: 100px;
+}
+.news-read:hover {
+    color: red;
+    transform: scale(1.1);
+}
+.news-item img:hover {
+    transform: scale(1.05);
+}
+
+/*Section6*/
+.attach {
+    display: flex;
+    justify-content: space-between;
+    margin:100px auto;
+    width: 80%;
+}
+.attach-item {
+    width: 24%;
+    text-align: center;
+}
+.attach-icon {
+    position: relative;
+    margin: auto;
+    width: 67px;
+    height: 53px;
+    overflow: hidden;
+}
+.attach-icon i{
+    font-size: 50px;
+    position: absolute;
+    top: 2px;
+    left: 1px;
+}
+.attach-icon .hid {
+    color: rgba(0, 0, 69, 0.425);
+    transition: 0.2s;
+}
+.attach-icon .vis {
+    color: rgb(0, 0, 69);
+    transform: translate(0,53px);
+    transition: 0.2s;
+}
+.attach-item:hover .vis {
+    transform: translate(0,0);
+}
+.attach-item:hover .hid {
+    transform: translate(0,-51px);
+}
+.attach-item h2 {
+    font-size: 18px;
+    color: rgb(0, 0, 56);
+    margin: 12px 0;
+}
+.attach-item p {
+    font-size: 14px;
+    color: rgb(84, 84, 84);
+}
+
+/*footer*/
+.foot {
+    height: 75vh;
+    background-color: black;
+    color: white;
+    padding-top: 20px;
+}
+.sub {
+    width: 80%;
+    margin:20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.sub-text h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.sub-text p {
+    font-size: 14px;
+}
+.sub-mail {
+    display: flex;
+    align-items: center;
+}
+.sub-mail input {
+    margin: 0 13px;
+    padding: 13px 20px;
+    width: 480px;
+    border-radius: 5px;
+    border: none;
+    font-size: 22px;
+}
+.sub-mail a {
+    display: block;
+    padding: 10px 33px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 22px;
+    background-color: red;
+    transition: 0.3s;
+}
+.sub-mail a:hover {
+    transform: scale(1.1);
+}
+.sub-icon {
+    margin-top: 5px;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub-icon i{
+    font-size: 27px;
+    color: rgba(255, 255, 255, 0.57);
+    transition: 0.3s;
+}
+.sub-icon a {
+    height: 27px;
+}
+.sub-icon i:hover {
+    color: white;
+    transform: scale(1.1);
+}
+.foot-line {
+    width: 80%;
+    margin: 15px auto;
+    height: 2px;
+    background-color: rgba(173, 173, 173, 0.652);
+}
+.foot-lists {
+    width: 80%;
+    margin:65px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.foot-logo {
+    display: flex;
+    justify-content: center;
+}
+.foot-logo img{
+    padding: 5px;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-top: -120px;
+}
+.foot-lists .foot-logo h2 {
+    color: rgb(177, 177, 177);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    margin: -108px 5px 0 8px;
+}
+.foot-logo span {
+    margin-top: -111px;
+    font-weight: 100;
+    font-size: 28px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.foot-lists h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+.foot-lists li {
+    list-style-type: none;
+    margin: 15px 0 ;
+    transition: 0.3s;
+}
+.foot-lists a {
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.764);
+    transition: 0.1s;
+}
+.foot-lists ul a:hover{
+    text-decoration: underline;
+    color: white;
+}
+.foot-lists li:hover {
+    transform: scale(1.05);
+}
+.copyright {
+    margin: -10px auto;
+}
+.copyright .foot-line {
+    margin: 2px auto;
+}
+.copyright  :last-child{
+    text-align: center;
+}
+.copyright a {
+    color: rgb(104, 180, 255);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.copyright a:hover {
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+.copyright span {
+    color: rgb(104, 180, 255);
+    margin: 0 5px;
+    font-size: 28px;
+    animation-name: za;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:infinite ;
+    animation-direction: alternate;
+}
+@keyframes za {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
